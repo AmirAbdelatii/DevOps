@@ -20,10 +20,10 @@ import java.util.List;
 @AllArgsConstructor
 public class InvoiceServiceImpl implements IInvoiceService {
 
-	final InvoiceRepository invoiceRepository;
-	final OperatorRepository operatorRepository;
-	final InvoiceDetailRepository invoiceDetailRepository;
-	final SupplierRepository supplierRepository;
+	public InvoiceRepository invoiceRepository;
+	public OperatorRepository operatorRepository;
+	public InvoiceDetailRepository invoiceDetailRepository;
+	public SupplierRepository supplierRepository;
 	
 	@Override
 	public List<Invoice> retrieveAllInvoices() {
