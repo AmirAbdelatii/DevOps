@@ -78,13 +78,13 @@
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-core</artifactId>
-            <version>1.7.0</version>
+            <version>1.9.12</version>
         </dependency>
 
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
-            <version>1.7.0</version>
+            <version>1.9.12</version>
         </dependency>
     </dependencies>
 
