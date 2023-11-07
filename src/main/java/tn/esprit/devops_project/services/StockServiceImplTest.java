@@ -43,7 +43,7 @@ class StockServiceImplTest {
 
         }};
 
-    
+
     @Test
     void retrieveAllStocktest() {
         when(stockServiceImpl.retrieveAllStock()).thenReturn(stocklist);
