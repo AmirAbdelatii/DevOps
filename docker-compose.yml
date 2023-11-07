@@ -7,6 +7,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8082:8082"  # Map container port to host port
+    environment:
+      SPRING_APPLICATION_JSON: '{
+      "spring.datasource.url":"jdbc:mysql://localhost:3306/devops?createDatabaseIfNotExist=true",
+       "spring.datasource.username":"root",
+       "spring.datasource.password": null ,
+       "spring.jpa.hibernate.ddl-auto":"update"
+      }'
     volumes:
       - ./src/main/resources/application.properties:/app/application.properties
     depends_on:
