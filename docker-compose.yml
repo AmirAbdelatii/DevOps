@@ -8,12 +8,10 @@ services:
     ports:
       - "8082:8082"  # Map container port to host port
     environment:
-      SPRING_APPLICATION_JSON: '{
-      "spring.datasource.url":"jdbc:mysql://localhost:3306/devops?createDatabaseIfNotExist=true",
-       "spring.datasource.username":"root",
-       "spring.datasource.password": null ,
-       "spring.jpa.hibernate.ddl-auto":"update"
-      }'
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/spring_db?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
     volumes:
       - ./src/main/resources/application.properties:/app/application.properties
     depends_on:
@@ -24,7 +22,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-      MYSQL_DATABASE: spring_db
+      MYSQL_DATABASE: spring_db  # Use the same database name as in the application.properties
     ports:
       - "3306:3306"  # Map container port to host port
     volumes:
