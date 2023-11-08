@@ -27,7 +27,7 @@ public class SupplierServiceImplTest {
 
     @Test
     public void testAddSupplier() {
-        // check webhook
+        // check webhook validation examen
         // Create a Supplier instance and set its properties
         Supplier addedSupplier = new Supplier();
         addedSupplier.setLabel("Supplier Label");
