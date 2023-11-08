@@ -16,7 +16,15 @@ services:
       - ./src/main/resources/application.properties:/app/application.properties
     depends_on:
       - mysql  # Define your database service name here
-
+  # Angular Application   
+  angular:
+    container_name: angular
+    ports:
+      - "80:80" 
+    networks:
+      - mynetwork
+    depends_on:
+      - spring-app      
   # MySQL database
   mysql:
     image: mysql:5.7
